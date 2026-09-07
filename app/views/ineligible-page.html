@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% from "panel/macro.njk" import panel %}
+{% from "summary-list/macro.njk" import summaryList %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {{ panel({
+        titleText: "You are not eligible",
+        text: "You are a MUGGLE"
+      }) }}
+
+      
+
+
+    </div>
+  </div>
+{% endblock %}
