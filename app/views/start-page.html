@@ -35,16 +35,7 @@
 
       {% from "error-summary/macro.njk" import errorSummary %}
 
-{{ errorSummary({
-  heading: "Not eligible",
-  description: "You must be aged 18 and above to use this service",
-  errorList: [
-    {
-      text: "Incorrect age input",
-      href: "#example-error-1"
-    }
-  ]
-}) }}
+
 
       <p>Use this service to order a test to check for magical powers.</p>
       <p>Only ordered this test if you have received an invite from NHS magical service, <span class="nhsuk-u-nowrap">{{dummyNhsNumber}}</span>.</p>

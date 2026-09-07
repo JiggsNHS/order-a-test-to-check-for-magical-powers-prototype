@@ -48,6 +48,23 @@
                 }
               ]
             }
+          },
+          {
+            key: {
+              text: "How do you want to receive your kit?"
+            },
+            value: {
+              text: data.receivingKit
+            },
+            actions: {
+              items: [
+                {
+                  href: "/receiving-kit",
+                  text: "Change",
+                  visuallyHiddenText: "How you want to receive kit"
+                }
+              ]
+            }
           }
           
           
@@ -60,7 +77,7 @@
         Your details will be sent to Rose Medical Practice to begin your registration.
       </p>
 
-      <form action="/form-handler" method="post" novalidate>
+      <form action="/confirmation-page" method="post" novalidate>
         {{ button({
           text: "Confirm and send"
         }) }}

@@ -16,7 +16,7 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form action="/check-answers" method="post" novalidate>
+      <form action="/receiving-kit" method="post" novalidate>
 
    {% from "textarea/macro.njk" import textarea %}
 
@@ -30,7 +30,7 @@
     text: "For example, flying, transfiguration or spells"
   },
   id: "details",
-  name: "details"
+  name: "details",
   value: data.details
 }) }}
      

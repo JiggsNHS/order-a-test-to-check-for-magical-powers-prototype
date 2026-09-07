@@ -7,12 +7,19 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      {{ panel({
-        titleText: "You are not eligible",
-        text: "You are a MUGGLE"
-      }) }}
+    {% from "warning-callout/macro.njk" import warningCallout %}
 
-      
+{{ warningCallout({
+  heading: "You are not eligible",
+  text: "Unfortunately, you are a MUGGLE"
+}) }}
+
+{% from "action-link/macro.njk" import actionLink %}
+
+{{ actionLink({
+  text: "Have another go Muggle",
+  href: "/start-page"
+}) }}
 
 
     </div>

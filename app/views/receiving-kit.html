@@ -8,7 +8,7 @@
 
 {% block beforeContent %}
   {{ backLink({
-    href: "/start-page",
+    href: "/details",
     text: "Back"
   }) }}
 {% endblock %}
@@ -16,26 +16,26 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form action="/magical-powers-answer" method="post" novalidate>
+      <form action="/check-answers" method="post" novalidate>
 
         {{ radios({
           fieldset: {
             legend: {
-              text: "Do you have magical powers?",
+              text: "How do you want to receive your kit?",
               size: "l",
               isPageHeading: true
             }
           },
-          name: "hasMagicalPowers",
-          value: data.hasMagicalPowers,
+          name: "receivingKit",
+          value: data.receivingKit,
           items: [
             {
-              value: "Yes",
-              text: "Yes"
+              value: "Broomsticks",
+              text: "By Broomsticks"
             },
             {
-              value: "No",
-              text: "No"
+              value: "MuggleDelivery",
+              text: "By Muggle Delivery"
             }
             
             

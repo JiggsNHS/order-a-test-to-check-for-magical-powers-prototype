@@ -14,27 +14,13 @@
 
       <h2 class="nhsuk-heading-m">Your details have been collected via airspace</h2>
 
-      {% set siteLocationHtml %}
-        St George's Pharmacy<br>
-        46 St George's Rd<br>
-        Elephant and Castle<br>
-        London<br>
-        SE1 6ET
-      {% endset %}
+      {% if data.receivingKit == "Broomsticks" %}
+        <p>Your kit will be sent by Broomsticks.</p>
+      {% else %}
+        <p>Your kit will be sent by Muggle Delivery.</p>
+      {% endif %}
 
-      {{ summaryList({
-        border: false,
-        rows: [
-          {
-            key: {
-              text: "Your home address"
-            },
-            value: {
-              html: siteLocationHtml
-            }
-          }
-        ]
-      }) }}
+  
 
 
     </div>
