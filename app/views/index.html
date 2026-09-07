@@ -37,16 +37,21 @@
         {{ serviceName }}
       </h1>
 
-      <p>Set the service name for your prototype by editing <strong>/app/config.js</strong>.</p>
+      <p>Use this service to request a test that checks for magical powers and find out if you qualify for magical power.</p>
 
-      <p>
-        This is the index page for your prototype. You can find it at <strong>/app/views/index.html</strong>.
-      </p>
+      {% from "action-link/macro.njk" import actionLink %}
+
+{{ actionLink({
+  text: "Start here",
+  href: "start-page"
+}) }}
+
+
 
       <hr>
 
       <h2 class="nhsuk-heading-l">
-        Get started
+        Before you start
       </h2>
 
       <ul class="nhsuk-list nhsuk-list--bullet">
