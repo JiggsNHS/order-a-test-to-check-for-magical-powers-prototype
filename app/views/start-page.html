@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+
+{% from "breadcrumb/macro.njk" import breadcrumb %}
+{% from "button/macro.njk" import button %}
+{% from "inset-text/macro.njk" import insetText %}
+
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+{% set dummyNhsNumber = "999 123 4567" %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "#",
+        text: "Home"
+      },
+      {
+        href: "#",
+        text: "NHS services"
+      },
+      {
+        href: "#",
+        text: "Online services"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-xl">Order a test to check for magical powers</h1>
+
+      {% from "error-summary/macro.njk" import errorSummary %}
+
+{{ errorSummary({
+  heading: "Not eligible",
+  description: "You must be aged 18 and above to use this service",
+  errorList: [
+    {
+      text: "Incorrect age input",
+      href: "#example-error-1"
+    }
+  ]
+}) }}
+
+      <p>Use this service to order a test to check for magical powers.</p>
+      <p>Only ordered this test if you have received an invite from NHS magical service, <span class="nhsuk-u-nowrap">{{dummyNhsNumber}}</span>.</p>
+      
+      
+      
+<ul class="nhsuk-grid-row nhsuk-card-group">
+  <li class="nhsuk-grid-column-two-thirds nhsuk-card-group__item">
+    {{ card({
+      heading: {
+        text: "Proxy witch service",
+        size: "m"
+      },
+      description: "About how to find and register with a local witch",
+      href: "#",
+      clickable: true,
+      variant: "primary"
+    }) }}
+  </li>
+</ul>
+
+
+      <h2 class="nhsuk-heading-l"> Who can use this service</h2>
+      <p>You can use this service if you live in England.</p>
+      <p>You can also use this service for someone else.</p>
+
+      
+      <p>By using this service you agree to our <a href="#">terms of use</a> and confirm that you have read the <a href="#">privacy policy</a>.</p>
+
+      {{ button({
+        text: "Start now",
+        href: "#"
+      }) }}
+
+      <h2 class="nhsuk-heading-m">Other ways to get your NHS number</h2>
+      <p>If you cannot get your NHS number online you can:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>find it on any letter from the NHS like a prescription or appointment letter</li>
+        <li>call your GP surgery and ask them for your number</li>
+      </ul>
+
+    </div>
+  </div>
+{% endblock %}
